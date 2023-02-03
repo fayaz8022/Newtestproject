@@ -1,0 +1,13 @@
+version: '3'
+services:
+  web:
+    image: nginx
+    ports:
+      - "80:80"
+  db:
+    image: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: dbname
+    ports:
+      - "3306:3306"
